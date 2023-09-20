@@ -60,3 +60,313 @@
 [0m15:41:07.039674 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m15:41:07.039932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edb6df410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edb622b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9edb622bd0>]}
 [0m15:41:07.040230 [debug] [MainThread]: Flushing usage events
+[0m16:17:24.263339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0493d6890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0493dd890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0493e80d0>]}
+
+
+============================== 16:17:24.265185 | 2cc8a764-7b2a-4d80-88a0-24004fbd8182 ==============================
+[0m16:17:24.265185 [info ] [MainThread]: Running with dbt=1.6.2
+[0m16:17:24.265741 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/jonas/Projects/dbt/etc_project/logs', 'debug': 'False', 'profiles_dir': '/home/jonas/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:17:24.680027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02e9eb710>]}
+[0m16:17:24.686358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02d5436d0>]}
+[0m16:17:24.686929 [info ] [MainThread]: Registered adapter: snowflake=1.6.2
+[0m16:17:24.692457 [debug] [MainThread]: checksum: 8d66c46a7c5c0e5717f369273dbde9db64740684d9ba42e6442c1808d698ae9f, vars: {}, profile: , target: , version: 1.6.2
+[0m16:17:24.708429 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:17:24.709289 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:17:24.710316 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_exercise.example
+[0m16:17:24.715582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02d06c550>]}
+[0m16:17:24.729096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02d4cdd50>]}
+[0m16:17:24.729673 [info ] [MainThread]: Found 7 models, 6 sources, 0 exposures, 0 metrics, 372 macros, 0 groups, 0 semantic models
+[0m16:17:24.730071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02e9ea750>]}
+[0m16:17:24.731600 [info ] [MainThread]: 
+[0m16:17:24.732292 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:17:24.733458 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_hejora'
+[0m16:17:24.748734 [debug] [ThreadPool]: Using snowflake connection "list_hejora"
+[0m16:17:24.749294 [debug] [ThreadPool]: On list_hejora: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "connection_name": "list_hejora"} */
+show terse schemas in database hejora
+    limit 10000
+[0m16:17:24.749634 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:17:25.369540 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m16:17:25.371223 [debug] [ThreadPool]: On list_hejora: Close
+[0m16:17:25.459260 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hejora, now list_hejora_public)
+[0m16:17:25.468973 [debug] [ThreadPool]: Using snowflake connection "list_hejora_public"
+[0m16:17:25.469584 [debug] [ThreadPool]: On list_hejora_public: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "connection_name": "list_hejora_public"} */
+show terse objects in hejora.public limit 10000
+[0m16:17:25.469915 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:17:25.860427 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.0 seconds
+[0m16:17:25.861968 [debug] [ThreadPool]: On list_hejora_public: Close
+[0m16:17:25.968186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc04a15c2d0>]}
+[0m16:17:25.968867 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:17:25.969215 [info ] [MainThread]: 
+[0m16:17:25.971397 [debug] [Thread-1 (]: Began running node model.etl_exercise.stg_barley_production
+[0m16:17:25.971795 [debug] [Thread-2 (]: Began running node model.etl_exercise.stg_coffee_bean_production
+[0m16:17:25.972235 [info ] [Thread-1 (]: 1 of 7 START sql view model public.stg_barley_production ....................... [RUN]
+[0m16:17:25.972745 [info ] [Thread-2 (]: 2 of 7 START sql view model public.stg_coffee_bean_production .................. [RUN]
+[0m16:17:25.973393 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hejora_public, now model.etl_exercise.stg_barley_production)
+[0m16:17:25.973781 [debug] [Thread-3 (]: Began running node model.etl_exercise.stg_maize_production
+[0m16:17:25.974189 [debug] [Thread-4 (]: Began running node model.etl_exercise.stg_sugar_cane_production
+[0m16:17:25.974900 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.etl_exercise.stg_coffee_bean_production'
+[0m16:17:25.975472 [debug] [Thread-1 (]: Began compiling node model.etl_exercise.stg_barley_production
+[0m16:17:25.976035 [info ] [Thread-3 (]: 3 of 7 START sql view model public.stg_maize_production ........................ [RUN]
+[0m16:17:25.976675 [info ] [Thread-4 (]: 4 of 7 START sql view model public.stg_sugar_cane_production ................... [RUN]
+[0m16:17:25.977366 [debug] [Thread-2 (]: Began compiling node model.etl_exercise.stg_coffee_bean_production
+[0m16:17:25.981189 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_exercise.stg_barley_production"
+[0m16:17:25.981999 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.etl_exercise.stg_maize_production'
+[0m16:17:25.983319 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.etl_exercise.stg_sugar_cane_production'
+[0m16:17:25.986239 [debug] [Thread-2 (]: Writing injected SQL for node "model.etl_exercise.stg_coffee_bean_production"
+[0m16:17:25.986916 [debug] [Thread-3 (]: Began compiling node model.etl_exercise.stg_maize_production
+[0m16:17:25.987499 [debug] [Thread-4 (]: Began compiling node model.etl_exercise.stg_sugar_cane_production
+[0m16:17:25.990747 [debug] [Thread-3 (]: Writing injected SQL for node "model.etl_exercise.stg_maize_production"
+[0m16:17:25.994929 [debug] [Thread-4 (]: Writing injected SQL for node "model.etl_exercise.stg_sugar_cane_production"
+[0m16:17:25.995844 [debug] [Thread-2 (]: Timing info for model.etl_exercise.stg_coffee_bean_production (compile): 16:17:25.983908 => 16:17:25.995607
+[0m16:17:25.996387 [debug] [Thread-1 (]: Timing info for model.etl_exercise.stg_barley_production (compile): 16:17:25.977673 => 16:17:25.996184
+[0m16:17:25.997359 [debug] [Thread-2 (]: Began executing node model.etl_exercise.stg_coffee_bean_production
+[0m16:17:25.998291 [debug] [Thread-3 (]: Timing info for model.etl_exercise.stg_maize_production (compile): 16:17:25.988008 => 16:17:25.997975
+[0m16:17:25.998893 [debug] [Thread-4 (]: Timing info for model.etl_exercise.stg_sugar_cane_production (compile): 16:17:25.991524 => 16:17:25.998655
+[0m16:17:25.999439 [debug] [Thread-1 (]: Began executing node model.etl_exercise.stg_barley_production
+[0m16:17:26.022464 [debug] [Thread-3 (]: Began executing node model.etl_exercise.stg_maize_production
+[0m16:17:26.027535 [debug] [Thread-2 (]: Writing runtime sql for node "model.etl_exercise.stg_coffee_bean_production"
+[0m16:17:26.028358 [debug] [Thread-4 (]: Began executing node model.etl_exercise.stg_sugar_cane_production
+[0m16:17:26.032149 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_exercise.stg_barley_production"
+[0m16:17:26.035873 [debug] [Thread-3 (]: Writing runtime sql for node "model.etl_exercise.stg_maize_production"
+[0m16:17:26.040426 [debug] [Thread-4 (]: Writing runtime sql for node "model.etl_exercise.stg_sugar_cane_production"
+[0m16:17:26.042973 [debug] [Thread-1 (]: Using snowflake connection "model.etl_exercise.stg_barley_production"
+[0m16:17:26.043841 [debug] [Thread-2 (]: Using snowflake connection "model.etl_exercise.stg_coffee_bean_production"
+[0m16:17:26.044637 [debug] [Thread-1 (]: On model.etl_exercise.stg_barley_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_barley_production"} */
+create or replace   view hejora.public.stg_barley_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.barley_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'barley' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.045334 [debug] [Thread-3 (]: Using snowflake connection "model.etl_exercise.stg_maize_production"
+[0m16:17:26.045877 [debug] [Thread-4 (]: Using snowflake connection "model.etl_exercise.stg_sugar_cane_production"
+[0m16:17:26.046245 [debug] [Thread-2 (]: On model.etl_exercise.stg_coffee_bean_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_coffee_bean_production"} */
+create or replace   view hejora.public.stg_coffee_bean_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.coffee_bean_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'coffee bean' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.046608 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:17:26.047091 [debug] [Thread-3 (]: On model.etl_exercise.stg_maize_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_maize_production"} */
+create or replace   view hejora.public.stg_maize_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.maize_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'maize' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.047458 [debug] [Thread-4 (]: On model.etl_exercise.stg_sugar_cane_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_sugar_cane_production"} */
+create or replace   view hejora.public.stg_sugar_cane_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.sugar_cane_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'sugar cane' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.047855 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:17:26.049609 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:17:26.049982 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:17:26.518962 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m16:17:26.529084 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m16:17:26.548980 [debug] [Thread-1 (]: Timing info for model.etl_exercise.stg_barley_production (execute): 16:17:26.028848 => 16:17:26.548834
+[0m16:17:26.549484 [debug] [Thread-1 (]: On model.etl_exercise.stg_barley_production: Close
+[0m16:17:26.555902 [debug] [Thread-4 (]: Timing info for model.etl_exercise.stg_sugar_cane_production (execute): 16:17:26.036379 => 16:17:26.555763
+[0m16:17:26.556376 [debug] [Thread-4 (]: On model.etl_exercise.stg_sugar_cane_production: Close
+[0m16:17:26.627558 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc024645c90>]}
+[0m16:17:26.628157 [info ] [Thread-1 (]: 1 of 7 OK created sql view model public.stg_barley_production .................. [[32mSUCCESS 1[0m in 0.65s]
+[0m16:17:26.628779 [debug] [Thread-1 (]: Finished running node model.etl_exercise.stg_barley_production
+[0m16:17:26.629175 [debug] [Thread-1 (]: Began running node model.etl_exercise.stg_tomato_production
+[0m16:17:26.629703 [info ] [Thread-1 (]: 5 of 7 START sql view model public.stg_tomato_production ....................... [RUN]
+[0m16:17:26.630436 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.etl_exercise.stg_barley_production, now model.etl_exercise.stg_tomato_production)
+[0m16:17:26.630788 [debug] [Thread-1 (]: Began compiling node model.etl_exercise.stg_tomato_production
+[0m16:17:26.632710 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_exercise.stg_tomato_production"
+[0m16:17:26.633659 [debug] [Thread-1 (]: Timing info for model.etl_exercise.stg_tomato_production (compile): 16:17:26.631052 => 16:17:26.633472
+[0m16:17:26.634084 [debug] [Thread-1 (]: Began executing node model.etl_exercise.stg_tomato_production
+[0m16:17:26.637525 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_exercise.stg_tomato_production"
+[0m16:17:26.638640 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0243f0bd0>]}
+[0m16:17:26.639400 [info ] [Thread-4 (]: 4 of 7 OK created sql view model public.stg_sugar_cane_production .............. [[32mSUCCESS 1[0m in 0.66s]
+[0m16:17:26.639962 [debug] [Thread-4 (]: Finished running node model.etl_exercise.stg_sugar_cane_production
+[0m16:17:26.640373 [debug] [Thread-4 (]: Began running node model.etl_exercise.stg_wheat_production
+[0m16:17:26.640881 [info ] [Thread-4 (]: 6 of 7 START sql view model public.stg_wheat_production ........................ [RUN]
+[0m16:17:26.641862 [debug] [Thread-1 (]: Using snowflake connection "model.etl_exercise.stg_tomato_production"
+[0m16:17:26.642679 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.etl_exercise.stg_sugar_cane_production, now model.etl_exercise.stg_wheat_production)
+[0m16:17:26.643170 [debug] [Thread-1 (]: On model.etl_exercise.stg_tomato_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_tomato_production"} */
+create or replace   view hejora.public.stg_tomato_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.tomato_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'tomato' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.643684 [debug] [Thread-4 (]: Began compiling node model.etl_exercise.stg_wheat_production
+[0m16:17:26.644248 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:17:26.647197 [debug] [Thread-4 (]: Writing injected SQL for node "model.etl_exercise.stg_wheat_production"
+[0m16:17:26.650123 [debug] [Thread-4 (]: Timing info for model.etl_exercise.stg_wheat_production (compile): 16:17:26.644619 => 16:17:26.649275
+[0m16:17:26.650835 [debug] [Thread-4 (]: Began executing node model.etl_exercise.stg_wheat_production
+[0m16:17:26.655763 [debug] [Thread-4 (]: Writing runtime sql for node "model.etl_exercise.stg_wheat_production"
+[0m16:17:26.657159 [debug] [Thread-4 (]: Using snowflake connection "model.etl_exercise.stg_wheat_production"
+[0m16:17:26.657733 [debug] [Thread-4 (]: On model.etl_exercise.stg_wheat_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.stg_wheat_production"} */
+create or replace   view hejora.public.stg_wheat_production
+  
+   as (
+    with source as (
+    select * 
+    from hejora.public.wheat_production
+),
+
+final as (
+    select 
+        ENTITY as entity, 
+        CODE as code, 
+        YEAR as year, 
+        TONNES as tonnes, 
+        'wheat' as product
+    from source
+)
+
+select * 
+from final
+  );
+[0m16:17:26.658077 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:17:26.749054 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m16:17:26.751538 [debug] [Thread-2 (]: Timing info for model.etl_exercise.stg_coffee_bean_production (execute): 16:17:26.000019 => 16:17:26.751400
+[0m16:17:26.751975 [debug] [Thread-2 (]: On model.etl_exercise.stg_coffee_bean_production: Close
+[0m16:17:26.763392 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m16:17:26.765607 [debug] [Thread-3 (]: Timing info for model.etl_exercise.stg_maize_production (execute): 16:17:26.032693 => 16:17:26.765476
+[0m16:17:26.765955 [debug] [Thread-3 (]: On model.etl_exercise.stg_maize_production: Close
+[0m16:17:26.851964 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0244e4d10>]}
+[0m16:17:26.852703 [info ] [Thread-3 (]: 3 of 7 OK created sql view model public.stg_maize_production ................... [[32mSUCCESS 1[0m in 0.87s]
+[0m16:17:26.853447 [debug] [Thread-3 (]: Finished running node model.etl_exercise.stg_maize_production
+[0m16:17:26.853892 [debug] [Thread-3 (]: Began running node model.etl_exercise.all_production
+[0m16:17:26.854291 [info ] [Thread-3 (]: 7 of 7 START sql view model public.all_production .............................. [RUN]
+[0m16:17:26.854997 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.etl_exercise.stg_maize_production, now model.etl_exercise.all_production)
+[0m16:17:26.855323 [debug] [Thread-3 (]: Began compiling node model.etl_exercise.all_production
+[0m16:17:26.857214 [debug] [Thread-3 (]: Writing injected SQL for node "model.etl_exercise.all_production"
+[0m16:17:26.857830 [debug] [Thread-3 (]: Timing info for model.etl_exercise.all_production (compile): 16:17:26.855566 => 16:17:26.857670
+[0m16:17:26.858208 [debug] [Thread-3 (]: Began executing node model.etl_exercise.all_production
+[0m16:17:26.861420 [debug] [Thread-3 (]: Writing runtime sql for node "model.etl_exercise.all_production"
+[0m16:17:26.862638 [debug] [Thread-3 (]: Using snowflake connection "model.etl_exercise.all_production"
+[0m16:17:26.863667 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02d06e550>]}
+[0m16:17:26.864195 [debug] [Thread-3 (]: On model.etl_exercise.all_production: /* {"app": "dbt", "dbt_version": "1.6.2", "profile_name": "etl_exercise", "target_name": "dev", "node_id": "model.etl_exercise.all_production"} */
+create or replace   view hejora.public.all_production
+  
+   as (
+    with barley as (
+    select * 
+    from hejora.public.stg_barley_production
+)
+
+select * 
+from barley
+  );
+[0m16:17:26.865719 [info ] [Thread-2 (]: 2 of 7 OK created sql view model public.stg_coffee_bean_production ............. [[32mSUCCESS 1[0m in 0.89s]
+[0m16:17:26.866934 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:17:26.867846 [debug] [Thread-2 (]: Finished running node model.etl_exercise.stg_coffee_bean_production
+[0m16:17:27.054181 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m16:17:27.056312 [debug] [Thread-1 (]: Timing info for model.etl_exercise.stg_tomato_production (execute): 16:17:26.634336 => 16:17:27.056182
+[0m16:17:27.056678 [debug] [Thread-1 (]: On model.etl_exercise.stg_tomato_production: Close
+[0m16:17:27.144042 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0243f1710>]}
+[0m16:17:27.144621 [info ] [Thread-1 (]: 5 of 7 OK created sql view model public.stg_tomato_production .................. [[32mSUCCESS 1[0m in 0.51s]
+[0m16:17:27.145213 [debug] [Thread-1 (]: Finished running node model.etl_exercise.stg_tomato_production
+[0m16:17:27.146669 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m16:17:27.148613 [debug] [Thread-4 (]: Timing info for model.etl_exercise.stg_wheat_production (execute): 16:17:26.651267 => 16:17:27.148490
+[0m16:17:27.148973 [debug] [Thread-4 (]: On model.etl_exercise.stg_wheat_production: Close
+[0m16:17:27.255018 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc0244ce310>]}
+[0m16:17:27.255602 [info ] [Thread-4 (]: 6 of 7 OK created sql view model public.stg_wheat_production ................... [[32mSUCCESS 1[0m in 0.61s]
+[0m16:17:27.256245 [debug] [Thread-4 (]: Finished running node model.etl_exercise.stg_wheat_production
+[0m16:17:27.264811 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m16:17:27.267547 [debug] [Thread-3 (]: Timing info for model.etl_exercise.all_production (execute): 16:17:26.858427 => 16:17:27.267333
+[0m16:17:27.268003 [debug] [Thread-3 (]: On model.etl_exercise.all_production: Close
+[0m16:17:27.353947 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2cc8a764-7b2a-4d80-88a0-24004fbd8182', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc02d087750>]}
+[0m16:17:27.354563 [info ] [Thread-3 (]: 7 of 7 OK created sql view model public.all_production ......................... [[32mSUCCESS 1[0m in 0.50s]
+[0m16:17:27.355196 [debug] [Thread-3 (]: Finished running node model.etl_exercise.all_production
+[0m16:17:27.356802 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:17:27.357093 [debug] [MainThread]: Connection 'model.etl_exercise.stg_tomato_production' was properly closed.
+[0m16:17:27.357391 [debug] [MainThread]: Connection 'model.etl_exercise.stg_coffee_bean_production' was properly closed.
+[0m16:17:27.357684 [debug] [MainThread]: Connection 'model.etl_exercise.all_production' was properly closed.
+[0m16:17:27.357962 [debug] [MainThread]: Connection 'model.etl_exercise.stg_wheat_production' was properly closed.
+[0m16:17:27.358312 [info ] [MainThread]: 
+[0m16:17:27.358696 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 2.63 seconds (2.63s).
+[0m16:17:27.359885 [debug] [MainThread]: Command end result
+[0m16:17:27.368059 [info ] [MainThread]: 
+[0m16:17:27.368763 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:17:27.369239 [info ] [MainThread]: 
+[0m16:17:27.369715 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m16:17:27.370557 [debug] [MainThread]: Command `dbt run` succeeded at 16:17:27.370429 after 3.11 seconds
+[0m16:17:27.371012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc04a7fa850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc04d8df650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc04d81ee90>]}
+[0m16:17:27.371503 [debug] [MainThread]: Flushing usage events
