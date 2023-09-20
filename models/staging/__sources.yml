@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: snowflake
+    schema: public
+    description: Dirty production data
+
+    tables:
+      - name: barley_production
+      - name: coffee_bean_production
+      - name: maize_production
+      - name: sugar_cane_production
+      - name: tomato_production
+      - name: wheat_production
