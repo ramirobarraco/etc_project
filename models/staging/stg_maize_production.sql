@@ -1,6 +1,6 @@
 with source as (
     select * 
-    from {{source('snowflake', 'barley_production')}}
+    from {{source('snowflake', 'maize_production')}}
 ),
 
 final as (
@@ -9,7 +9,7 @@ final as (
         CODE as code, 
         YEAR as year, 
         TONNES as tonnes, 
-        'barley' as product
+        'maize' as product
     from source
 )
 
